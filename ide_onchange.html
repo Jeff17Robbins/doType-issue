@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Onchange Issue</title>
+</head>
+<body>
+<script type="text/javascript">
+ function nameChange(selectObj) {
+	 document.getElementById("id_addr-line1").value = document.getElementById("id_first-name").value
+ }
+</script>
+	<form action="/action_page.php">
+		First name: <input id="id_first-name" onchange="nameChange()" type="text" name="first-name"><br>
+		Last name: <input id="id_last-name" type="text" name="last-name"><br> 
+		Addr line 1: <input id="id_addr-line1" type="text" name="addr-line1"><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
